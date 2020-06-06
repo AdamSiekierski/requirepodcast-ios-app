@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xex-oY-Ydh">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Episode list-->
+        <scene sceneID="Rec-6n-tyN">
+            <objects>
+                <tableViewController id="2df-VT-pp3" userLabel="Episode list" customClass="EpisodeListViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9pB-eH-ZY8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeListCell" id="6Rg-Jp-xh8">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="episodeListCell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Rg-Jp-xh8" id="dxx-Vx-Y5a">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SNy-VJ-yJ3" kind="show" id="B1a-Xf-tdm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2df-VT-pp3" id="lOU-8l-0MP"/>
+                            <outlet property="delegate" destination="2df-VT-pp3" id="R6p-1d-V2h"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Wszystkie odcinki" id="cS9-LG-SE6">
+                        <barButtonItem key="backBarButtonItem" title="Wszystkie odcinki" id="9D4-D9-B2b"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="9pB-eH-ZY8" id="u9y-ir-3ci"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQ3-JK-4A5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="-230"/>
+        </scene>
+        <!--Episode Detail View Controller-->
+        <scene sceneID="y80-0I-3nK">
+            <objects>
+                <viewController id="SNy-VJ-yJ3" customClass="EpisodeDetailViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcy-wB-eQT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pIB-Ga-gyZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4YG-9L-Mug"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7n-CA-jv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133" y="-230"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6hx-g1-RJd">
+            <objects>
+                <tabBarController id="xex-oY-Ydh" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X5h-JX-IjY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="RequireRed"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YKv-Jb-lxb" kind="relationship" relationship="viewControllers" id="A55-u6-a7N"/>
+                        <segue destination="doD-p7-bf3" kind="relationship" relationship="viewControllers" id="G5E-Xb-5KN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pT-1G-6J0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1328" y="136"/>
+        </scene>
+        <!--Odcinki-->
+        <scene sceneID="9ii-lC-9Ab">
+            <objects>
+                <navigationController id="doD-p7-bf3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Odcinki" image="music.note.list" catalog="system" id="J0x-mr-JFg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gLN-XX-I8O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2df-VT-pp3" kind="relationship" relationship="rootViewController" id="hAe-si-E4n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-7K-REy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="-230"/>
+        </scene>
+        <!--Słuchaj-->
+        <scene sceneID="y5v-U6-PPa">
+            <objects>
+                <viewController id="YKv-Jb-lxb" customClass="ListenViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u7w-3O-CIt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUZ-ST-FBC">
+                                <rect key="frame" x="50" y="317.5" width="314" height="261.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-t1-hNC">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="41"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulD-dS-eV3" customClass="PlayButton" customModule="requirepodcast_app_ios" customModuleProvider="target">
+                                        <rect key="frame" x="107" y="161.5" width="100" height="100"/>
+                                        <color key="backgroundColor" name="RequireRed"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="pHr-TB-W0k"/>
+                                            <constraint firstAttribute="height" constant="100" id="zuI-Zs-njx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="play.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="default"/>
+                                        </state>
+                                        <state key="selected" title="aaa">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="highlighted" image="play.fill" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCw-EV-ndG">
+                                        <rect key="frame" x="0.0" y="91" width="314" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ulD-dS-eV3" secondAttribute="bottom" id="6nW-87-w8M"/>
+                                    <constraint firstItem="eCw-EV-ndG" firstAttribute="top" secondItem="5Mw-t1-hNC" secondAttribute="bottom" constant="50" id="8Fn-6G-vQn"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Mw-t1-hNC" secondAttribute="trailing" id="ANR-ZF-1Le"/>
+                                    <constraint firstItem="ulD-dS-eV3" firstAttribute="centerX" secondItem="fUZ-ST-FBC" secondAttribute="centerX" id="LNG-OT-4n6"/>
+                                    <constraint firstItem="ulD-dS-eV3" firstAttribute="top" secondItem="eCw-EV-ndG" secondAttribute="bottom" constant="50" id="Ntx-Zd-NwK"/>
+                                    <constraint firstItem="eCw-EV-ndG" firstAttribute="leading" secondItem="fUZ-ST-FBC" secondAttribute="leading" id="ljN-PO-5bq"/>
+                                    <constraint firstAttribute="trailing" secondItem="eCw-EV-ndG" secondAttribute="trailing" id="orn-Ul-RX1"/>
+                                    <constraint firstItem="5Mw-t1-hNC" firstAttribute="top" secondItem="fUZ-ST-FBC" secondAttribute="top" id="wM3-xu-qxg"/>
+                                    <constraint firstItem="5Mw-t1-hNC" firstAttribute="leading" secondItem="fUZ-ST-FBC" secondAttribute="leading" id="yoV-Lj-96b"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fUZ-ST-FBC" firstAttribute="centerY" secondItem="F6f-xU-PHF" secondAttribute="centerY" constant="19.5" id="C7d-kj-Ty5"/>
+                            <constraint firstItem="F6f-xU-PHF" firstAttribute="trailing" secondItem="fUZ-ST-FBC" secondAttribute="trailing" constant="50" id="Hp8-nj-2KY"/>
+                            <constraint firstItem="fUZ-ST-FBC" firstAttribute="leading" secondItem="F6f-xU-PHF" secondAttribute="leading" constant="50" id="qza-ke-WXe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F6f-xU-PHF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Słuchaj" image="play" catalog="system" id="9wb-Wh-ZEi"/>
+                    <connections>
+                        <outlet property="episodeDescription" destination="eCw-EV-ndG" id="Adt-Mk-xtm"/>
+                        <outlet property="episodeTitle" destination="5Mw-t1-hNC" id="FfJ-bd-RTA"/>
+                        <outlet property="playButton" destination="ulD-dS-eV3" id="FQF-qs-sSy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTz-jw-O32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449.27536231884062" y="444.64285714285711"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" name="RequireRed"/>
+    <resources>
+        <image name="music.note.list" catalog="system" width="128" height="113"/>
+        <image name="play" catalog="system" width="120" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <namedColor name="RequireRed">
+            <color red="1" green="0.32549019607843138" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

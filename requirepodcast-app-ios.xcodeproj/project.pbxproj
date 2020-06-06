@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66B6D280248B7CFC00ADC146 /* PodcastRSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B6D27F248B7CFC00ADC146 /* PodcastRSSParser.swift */; };
 		66F3D807248AE0FE00D62F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D806248AE0FE00D62F91 /* AppDelegate.swift */; };
 		66F3D809248AE0FE00D62F91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D808248AE0FE00D62F91 /* SceneDelegate.swift */; };
 		66F3D80B248AE0FE00D62F91 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D80A248AE0FE00D62F91 /* EpisodeListViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66B6D27F248B7CFC00ADC146 /* PodcastRSSParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRSSParser.swift; sourceTree = "<group>"; };
 		66F3D803248AE0FE00D62F91 /* requirepodcast-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "requirepodcast-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F3D806248AE0FE00D62F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F3D808248AE0FE00D62F91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66B6D27E248B7C4900ADC146 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				66B6D27F248B7CFC00ADC146 /* PodcastRSSParser.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		66F3D7FA248AE0FE00D62F91 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		66F3D805248AE0FE00D62F91 /* requirepodcast-app-ios */ = {
 			isa = PBXGroup;
 			children = (
+				66B6D27E248B7C4900ADC146 /* Utils */,
 				66F3D81B248AE3EC00D62F91 /* Controllers */,
 				66F3D81A248AE3AB00D62F91 /* Resources */,
 				66F3D806248AE0FE00D62F91 /* AppDelegate.swift */,
@@ -161,6 +172,7 @@
 				66F3D81D248AE50D00D62F91 /* EpisodeDetailViewController.swift in Sources */,
 				66F3D807248AE0FE00D62F91 /* AppDelegate.swift in Sources */,
 				66F3D809248AE0FE00D62F91 /* SceneDelegate.swift in Sources */,
+				66B6D280248B7CFC00ADC146 /* PodcastRSSParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,6 +24,7 @@ class EpisodeListViewController: UITableViewController, UISearchResultsUpdating 
 
     searchController.searchResultsUpdater = self
     searchController.searchBar.placeholder = "Znajdź odcinek"
+    searchController.obscuresBackgroundDuringPresentation = false
     navigationItem.searchController = searchController
   }
   
@@ -55,6 +56,7 @@ class EpisodeListViewController: UITableViewController, UISearchResultsUpdating 
     if let nextViewController = segue.destination as? EpisodeDetailViewController {
       let indexPath = self.tableView.indexPathForSelectedRow!
       nextViewController.episode = (isSearchBarEmpty ? episodes : filteredEpisodes)[indexPath.row]
+      self.tableView.deselectRow(at: indexPath, animated: true)
     }
   }
   

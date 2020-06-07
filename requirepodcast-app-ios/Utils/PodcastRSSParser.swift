@@ -40,7 +40,7 @@ class PodcastRSSParser: NSObject, XMLParserDelegate {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "E, dd MMM yyyy HH:mm:ss Z"
     
-    if (episodes.count != 0) {
+    if (episodes.count != 0 && foundCharacters != "\n\t\t\t") {
       switch (currentElement) {
         case "title":
           episodes[episodes.endIndex - 1].title += foundCharacters

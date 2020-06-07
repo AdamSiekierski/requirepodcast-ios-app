@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		660580EC248BD97800ED63FA /* ListenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660580EB248BD97800ED63FA /* ListenViewController.swift */; };
+		6630DF98248BF0A100ABE19B /* HTMLToAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6630DF97248BF0A100ABE19B /* HTMLToAttributedString.swift */; };
 		66370EAA248BE9D50027394F /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66370EA9248BE9D50027394F /* PlayButton.swift */; };
 		66B6D280248B7CFC00ADC146 /* PodcastRSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B6D27F248B7CFC00ADC146 /* PodcastRSSParser.swift */; };
 		66F3D807248AE0FE00D62F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D806248AE0FE00D62F91 /* AppDelegate.swift */; };
@@ -17,10 +18,14 @@
 		66F3D810248AE10000D62F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F3D80F248AE10000D62F91 /* Assets.xcassets */; };
 		66F3D813248AE10000D62F91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F3D811248AE10000D62F91 /* LaunchScreen.storyboard */; };
 		66F3D81D248AE50D00D62F91 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D81C248AE50D00D62F91 /* EpisodeDetailViewController.swift */; };
+		66FD03DC248CFC4F0022EAB2 /* PlayerTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD03DB248CFC4F0022EAB2 /* PlayerTabBarControllerViewController.swift */; };
+		66FD03E2248CFD320022EAB2 /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66FD03E1248CFD320022EAB2 /* PlayerView.xib */; };
+		66FD03E4248CFDC30022EAB2 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD03E3248CFDC30022EAB2 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		660580EB248BD97800ED63FA /* ListenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenViewController.swift; sourceTree = "<group>"; };
+		6630DF97248BF0A100ABE19B /* HTMLToAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLToAttributedString.swift; sourceTree = "<group>"; };
 		66370EA9248BE9D50027394F /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		66B6D27F248B7CFC00ADC146 /* PodcastRSSParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRSSParser.swift; sourceTree = "<group>"; };
 		66F3D803248AE0FE00D62F91 /* requirepodcast-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "requirepodcast-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +37,9 @@
 		66F3D812248AE10000D62F91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66F3D814248AE10000D62F91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66F3D81C248AE50D00D62F91 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EpisodeDetailViewController.swift; path = "requirepodcast-app-ios/Controllers/EpisodeDetailViewController.swift"; sourceTree = SOURCE_ROOT; };
+		66FD03DB248CFC4F0022EAB2 /* PlayerTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		66FD03E1248CFD320022EAB2 /* PlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
+		66FD03E3248CFDC30022EAB2 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				66370EA9248BE9D50027394F /* PlayButton.swift */,
+				66FD03E3248CFDC30022EAB2 /* PlayerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -57,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				66B6D27F248B7CFC00ADC146 /* PodcastRSSParser.swift */,
+				6630DF97248BF0A100ABE19B /* HTMLToAttributedString.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -97,6 +107,7 @@
 			children = (
 				66F3D811248AE10000D62F91 /* LaunchScreen.storyboard */,
 				66F3D80C248AE0FE00D62F91 /* Main.storyboard */,
+				66FD03E1248CFD320022EAB2 /* PlayerView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 				66F3D81C248AE50D00D62F91 /* EpisodeDetailViewController.swift */,
 				66F3D80A248AE0FE00D62F91 /* EpisodeListViewController.swift */,
 				660580EB248BD97800ED63FA /* ListenViewController.swift */,
+				66FD03DB248CFC4F0022EAB2 /* PlayerTabBarControllerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,6 +184,7 @@
 				66F3D813248AE10000D62F91 /* LaunchScreen.storyboard in Resources */,
 				66F3D810248AE10000D62F91 /* Assets.xcassets in Resources */,
 				66F3D80E248AE0FE00D62F91 /* Main.storyboard in Resources */,
+				66FD03E2248CFD320022EAB2 /* PlayerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,12 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FD03DC248CFC4F0022EAB2 /* PlayerTabBarControllerViewController.swift in Sources */,
 				66F3D80B248AE0FE00D62F91 /* EpisodeListViewController.swift in Sources */,
 				66370EAA248BE9D50027394F /* PlayButton.swift in Sources */,
+				66FD03E4248CFDC30022EAB2 /* PlayerView.swift in Sources */,
 				66F3D81D248AE50D00D62F91 /* EpisodeDetailViewController.swift in Sources */,
 				66F3D807248AE0FE00D62F91 /* AppDelegate.swift in Sources */,
 				66F3D809248AE0FE00D62F91 /* SceneDelegate.swift in Sources */,
 				66B6D280248B7CFC00ADC146 /* PodcastRSSParser.swift in Sources */,
+				6630DF98248BF0A100ABE19B /* HTMLToAttributedString.swift in Sources */,
 				660580EC248BD97800ED63FA /* ListenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "requirepodcast-app-ios/requirepodcast-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AET832XGGG;
 				INFOPLIST_FILE = "requirepodcast-app-ios/Info.plist";
@@ -341,6 +358,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "adamsiekierski.requirepodcast-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "requirepodcast-app-ios/requirepodcast-app-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AET832XGGG;
 				INFOPLIST_FILE = "requirepodcast-app-ios/Info.plist";
@@ -359,6 +378,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "adamsiekierski.requirepodcast-app-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

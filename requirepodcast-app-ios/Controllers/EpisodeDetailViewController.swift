@@ -9,14 +9,26 @@
 import UIKit
 
 class EpisodeDetailViewController: UIViewController {
+  @IBOutlet weak var episodeTitle: UILabel!
+  @IBOutlet weak var pubDate: UILabel!
+  
   var episode:Episode = Episode(title: "", description: "", audioUrl: "", pubDate: Date())
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    navigationItem.title = String(episode.title.split(separator: "-")[0])
+    updateValues()
   }
   
+  func updateValues() {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd-MM-yyyy"
+
+    // navigationItem.title = String(episode.title.split(separator: "-")[0])
+    // episodeTitle.text = String(episode.title.split(separator: "-")[1].trimmingCharacters(in: .whitespacesAndNewlines))
+    episodeTitle.text = episode.title
+    pubDate.text = "Data publikacji: \(dateFormatter.string(from: episode.pubDate))"
+  }
 
   /*
   // MARK: - Navigation

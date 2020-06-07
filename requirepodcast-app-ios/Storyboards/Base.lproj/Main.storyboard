@@ -43,27 +43,63 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ3-JK-4A5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="-230"/>
+            <point key="canvasLocation" x="378" y="-176"/>
         </scene>
         <!--Episode Detail View Controller-->
         <scene sceneID="y80-0I-3nK">
             <objects>
-                <viewController id="SNy-VJ-yJ3" customClass="EpisodeDetailViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="SNy-VJ-yJ3" customClass="EpisodeDetailViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jcy-wB-eQT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RequireLogo" translatesAutoresizingMaskIntoConstraints="NO" id="sNK-Bc-w6A">
+                                <rect key="frame" x="25" y="113" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="K6o-w2-pdm"/>
+                                    <constraint firstAttribute="width" constant="120" id="rrp-Cm-PQW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNQ-uZ-fND">
+                                <rect key="frame" x="170" y="113" width="219" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuK-HO-tjC">
+                                <rect key="frame" x="170" y="147" width="219" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pIB-Ga-gyZ" firstAttribute="trailing" secondItem="LNQ-uZ-fND" secondAttribute="trailing" constant="25" id="BDk-nX-ich"/>
+                            <constraint firstItem="MuK-HO-tjC" firstAttribute="leading" secondItem="sNK-Bc-w6A" secondAttribute="trailing" constant="25" id="P83-2y-6kG"/>
+                            <constraint firstItem="pIB-Ga-gyZ" firstAttribute="trailing" secondItem="MuK-HO-tjC" secondAttribute="trailing" constant="25" id="RWD-ki-qlc"/>
+                            <constraint firstItem="LNQ-uZ-fND" firstAttribute="leading" secondItem="sNK-Bc-w6A" secondAttribute="trailing" constant="25" id="XSz-BL-Ras"/>
+                            <constraint firstItem="sNK-Bc-w6A" firstAttribute="top" secondItem="pIB-Ga-gyZ" secondAttribute="top" constant="25" id="cpa-xO-sJW"/>
+                            <constraint firstItem="LNQ-uZ-fND" firstAttribute="top" secondItem="pIB-Ga-gyZ" secondAttribute="top" constant="25" id="flj-dI-LaL"/>
+                            <constraint firstItem="sNK-Bc-w6A" firstAttribute="leading" secondItem="pIB-Ga-gyZ" secondAttribute="leading" constant="25" id="fqh-Fe-LwQ"/>
+                            <constraint firstItem="MuK-HO-tjC" firstAttribute="top" secondItem="LNQ-uZ-fND" secondAttribute="bottom" constant="10" id="tRE-dX-2fs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pIB-Ga-gyZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4YG-9L-Mug"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="4YG-9L-Mug"/>
+                    <connections>
+                        <outlet property="episodeTitle" destination="LNQ-uZ-fND" id="hsi-Jd-hYe"/>
+                        <outlet property="pubDate" destination="MuK-HO-tjC" id="Ws4-gZ-guz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7n-CA-jv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1133" y="-230"/>
+            <point key="canvasLocation" x="1197" y="-176"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Player Tab Bar Controller View Controller-->
         <scene sceneID="6hx-g1-RJd">
             <objects>
-                <tabBarController id="xex-oY-Ydh" sceneMemberID="viewController">
+                <tabBarController id="xex-oY-Ydh" customClass="PlayerTabBarControllerViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X5h-JX-IjY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -94,7 +130,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-7K-REy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-448" y="-230"/>
+            <point key="canvasLocation" x="-384" y="-176"/>
         </scene>
         <!--Słuchaj-->
         <scene sceneID="y5v-U6-PPa">
@@ -105,26 +141,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUZ-ST-FBC">
-                                <rect key="frame" x="50" y="317.5" width="314" height="261.5"/>
+                                <rect key="frame" x="50" y="398" width="314" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-t1-hNC">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mw-t1-hNC">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="0.0"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCw-EV-ndG">
+                                        <rect key="frame" x="0.0" y="10" width="314" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulD-dS-eV3" customClass="PlayButton" customModule="requirepodcast_app_ios" customModuleProvider="target">
-                                        <rect key="frame" x="107" y="161.5" width="100" height="100"/>
+                                        <rect key="frame" x="117" y="20" width="80" height="80"/>
                                         <color key="backgroundColor" name="RequireRed"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="pHr-TB-W0k"/>
-                                            <constraint firstAttribute="height" constant="100" id="zuI-Zs-njx"/>
+                                            <constraint firstAttribute="width" constant="80" id="pHr-TB-W0k"/>
+                                            <constraint firstAttribute="height" constant="80" id="zuI-Zs-njx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="play.fill" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="default"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="default"/>
                                         </state>
                                         <state key="selected" title="aaa">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,24 +174,18 @@
                                         <state key="highlighted" image="play.fill" catalog="system"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="50"/>
+                                                <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCw-EV-ndG">
-                                        <rect key="frame" x="0.0" y="91" width="314" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ulD-dS-eV3" secondAttribute="bottom" id="6nW-87-w8M"/>
-                                    <constraint firstItem="eCw-EV-ndG" firstAttribute="top" secondItem="5Mw-t1-hNC" secondAttribute="bottom" constant="50" id="8Fn-6G-vQn"/>
+                                    <constraint firstItem="eCw-EV-ndG" firstAttribute="top" secondItem="5Mw-t1-hNC" secondAttribute="bottom" constant="10" id="8Fn-6G-vQn"/>
                                     <constraint firstAttribute="trailing" secondItem="5Mw-t1-hNC" secondAttribute="trailing" id="ANR-ZF-1Le"/>
                                     <constraint firstItem="ulD-dS-eV3" firstAttribute="centerX" secondItem="fUZ-ST-FBC" secondAttribute="centerX" id="LNG-OT-4n6"/>
-                                    <constraint firstItem="ulD-dS-eV3" firstAttribute="top" secondItem="eCw-EV-ndG" secondAttribute="bottom" constant="50" id="Ntx-Zd-NwK"/>
+                                    <constraint firstItem="ulD-dS-eV3" firstAttribute="top" secondItem="eCw-EV-ndG" secondAttribute="bottom" constant="10" id="Ntx-Zd-NwK"/>
                                     <constraint firstItem="eCw-EV-ndG" firstAttribute="leading" secondItem="fUZ-ST-FBC" secondAttribute="leading" id="ljN-PO-5bq"/>
                                     <constraint firstAttribute="trailing" secondItem="eCw-EV-ndG" secondAttribute="trailing" id="orn-Ul-RX1"/>
                                     <constraint firstItem="5Mw-t1-hNC" firstAttribute="top" secondItem="fUZ-ST-FBC" secondAttribute="top" id="wM3-xu-qxg"/>
@@ -174,11 +210,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTz-jw-O32" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-449.27536231884062" y="444.64285714285711"/>
+            <point key="canvasLocation" x="-384" y="500"/>
         </scene>
     </scenes>
     <color key="tintColor" name="RequireRed"/>
     <resources>
+        <image name="RequireLogo" width="3000" height="3000"/>
         <image name="music.note.list" catalog="system" width="128" height="113"/>
         <image name="play" catalog="system" width="120" height="128"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>

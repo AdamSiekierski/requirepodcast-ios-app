@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,12 +13,39 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="353"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOm-Vt-ebd">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fDT-P0-D0V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="357"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dupa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYU-fN-cdl">
+                                <rect key="frame" x="187.5" y="168" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gYU-fN-cdl" firstAttribute="centerY" secondItem="fDT-P0-D0V" secondAttribute="centerY" id="LH8-9V-CTg"/>
+                            <constraint firstItem="gYU-fN-cdl" firstAttribute="centerX" secondItem="fDT-P0-D0V" secondAttribute="centerX" id="v6l-0x-VFy"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="zOm-Vt-ebd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="052-qL-XfX"/>
+                <constraint firstItem="zOm-Vt-ebd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Cw0-Y2-w4S"/>
+                <constraint firstAttribute="trailing" secondItem="zOm-Vt-ebd" secondAttribute="trailing" id="QW7-t7-hFw"/>
+                <constraint firstAttribute="bottom" secondItem="zOm-Vt-ebd" secondAttribute="bottom" id="TMO-9G-IkA"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.68115942028987" y="310.37946428571428"/>
+            <point key="canvasLocation" x="137.68115942028987" y="309.04017857142856"/>
         </view>
     </objects>
 </document>

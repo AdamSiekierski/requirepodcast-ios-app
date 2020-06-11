@@ -12,6 +12,10 @@ class PlayerTabBarControllerViewController: UITabBarController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    let playerView = PlayerView()    
+    self.tabBar.addSubview(playerView)
+    playerView.frame = CGRect(x: 0, y: -65, width: self.tabBar.frame.width, height: 65)
   }
   
 

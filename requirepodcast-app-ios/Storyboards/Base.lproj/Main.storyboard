@@ -72,6 +72,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsI-Wd-ic6">
+                                <rect key="frame" x="25" y="258" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -82,12 +88,16 @@
                             <constraint firstItem="sNK-Bc-w6A" firstAttribute="top" secondItem="pIB-Ga-gyZ" secondAttribute="top" constant="25" id="cpa-xO-sJW"/>
                             <constraint firstItem="LNQ-uZ-fND" firstAttribute="top" secondItem="pIB-Ga-gyZ" secondAttribute="top" constant="25" id="flj-dI-LaL"/>
                             <constraint firstItem="sNK-Bc-w6A" firstAttribute="leading" secondItem="pIB-Ga-gyZ" secondAttribute="leading" constant="25" id="fqh-Fe-LwQ"/>
+                            <constraint firstItem="gsI-Wd-ic6" firstAttribute="top" secondItem="sNK-Bc-w6A" secondAttribute="bottom" constant="25" id="gUv-eN-fP3"/>
+                            <constraint firstItem="pIB-Ga-gyZ" firstAttribute="trailing" secondItem="gsI-Wd-ic6" secondAttribute="trailing" constant="25" id="kSD-iJ-dDV"/>
+                            <constraint firstItem="gsI-Wd-ic6" firstAttribute="leading" secondItem="pIB-Ga-gyZ" secondAttribute="leading" constant="25" id="oet-ZH-IOm"/>
                             <constraint firstItem="MuK-HO-tjC" firstAttribute="top" secondItem="LNQ-uZ-fND" secondAttribute="bottom" constant="10" id="tRE-dX-2fs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pIB-Ga-gyZ"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="4YG-9L-Mug"/>
                     <connections>
+                        <outlet property="episodeDescription" destination="gsI-Wd-ic6" id="ath-tT-agB"/>
                         <outlet property="episodeTitle" destination="LNQ-uZ-fND" id="hsi-Jd-hYe"/>
                         <outlet property="pubDate" destination="MuK-HO-tjC" id="Ws4-gZ-guz"/>
                     </connections>

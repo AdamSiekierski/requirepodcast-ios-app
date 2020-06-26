@@ -13,9 +13,15 @@ class PlayerTabBarControllerViewController: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let playerView = PlayerView()    
+    let playerView = PlayerView(frame: CGRect.zero)
     self.tabBar.addSubview(playerView)
-    playerView.frame = CGRect(x: 0, y: -65, width: self.tabBar.frame.width, height: 65)
+    playerView.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      playerView.bottomAnchor.constraint(equalTo: self.tabBar.topAnchor),
+      playerView.leadingAnchor.constraint(equalTo: self.tabBar.leadingAnchor),
+      playerView.trailingAnchor.constraint(equalTo: self.tabBar.trailingAnchor),
+      playerView.heightAnchor.constraint(equalToConstant: 65)
+    ])
   }
   
 

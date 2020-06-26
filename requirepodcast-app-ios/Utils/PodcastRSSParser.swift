@@ -31,6 +31,10 @@ class PodcastRSSParser: NSObject, XMLParserDelegate {
   func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
     if (elementName == "item") {
       episodes.append(Episode(title: "", description: "", audioUrl: "", pubDate: Date()))
+    } else if (elementName == "enclosure") {
+      if let url = attributeDict["url"] {
+        episodes[episodes.endIndex - 1].audioUrl = url
+      }
     }
     
     currentElement = elementName

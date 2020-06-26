@@ -26,5 +26,17 @@ class PlayerView: UIView {
     addSubview(contentView)
     contentView.frame = self.bounds
     contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    
+    // Bottom border
+    let borderView = UIView(frame: CGRect.zero)
+    borderView.backgroundColor = UIColor.opaqueSeparator
+    self.addSubview(borderView)
+    borderView.translatesAutoresizingMaskIntoConstraints = false;
+    NSLayoutConstraint.activate([
+      borderView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+      borderView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+      borderView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+      borderView.heightAnchor.constraint(equalToConstant: 0.5)
+    ])
   }
 }

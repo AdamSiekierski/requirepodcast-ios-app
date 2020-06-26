@@ -48,7 +48,7 @@
         <!--Episode Detail View Controller-->
         <scene sceneID="y80-0I-3nK">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="SNy-VJ-yJ3" customClass="EpisodeDetailViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SNy-VJ-yJ3" customClass="EpisodeDetailViewController" customModule="requirepodcast_app_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jcy-wB-eQT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

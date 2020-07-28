@@ -13,7 +13,7 @@ class EpisodeDetailViewController: UIViewController {
   @IBOutlet weak var pubDate: UILabel!
   @IBOutlet weak var episodeDescription: UILabel!
   
-  var episode:Episode = Episode(title: "", description: "", audioUrl: "", pubDate: Date())
+  var episode:Episode = Episode()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,7 +26,12 @@ class EpisodeDetailViewController: UIViewController {
     dateFormatter.dateFormat = "dd-MM-yyyy"
 
     episodeTitle.text = episode.title
-    pubDate.text = "Data publikacji: \(dateFormatter.string(from: episode.pubDate))"
-    episodeDescription.text = self.episode.description.htmlToString
+    if let publicationDate = episode.publicationDate {
+      pubDate.text = "Data publikacji: \(dateFormatter.string(from: publicationDate))"
+    }
+    
+    if let description = episode.description?.html {
+      episodeDescription.text = description.htmlToString
+    }
   }
 }

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class EpisodeListViewController: UITableViewController, UISearchResultsUpdating {
   var episodes:[Episode] = []
   var filteredEpisodes:[Episode] = []
@@ -19,7 +18,6 @@ class EpisodeListViewController: UITableViewController, UISearchResultsUpdating 
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
     self.getData()
 
     searchController.searchResultsUpdater = self
@@ -29,11 +27,41 @@ class EpisodeListViewController: UITableViewController, UISearchResultsUpdating 
   }
   
   func getData() {
-    let url = URL(string: "https://anchor.fm/s/139df89c/podcast/rss")!
-    let episodeParser = PodcastRSSParser()
-    episodeParser.parse(url: url) { episodes in
-      self.episodes = episodes
-    }
+    let url = URL(string: "https://require.podcast.gq/episodes.json")!
+    
+    let session = URLSession.shared
+    let task = session.dataTask(with: url, completionHandler: { data, response, error -> Void in
+      do {
+        let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, Any>
+        
+        let episodes = json["episodes"] as! [Dictionary<String, AnyObject>]
+
+        for episode in episodes {
+          let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "yyyy-MM-dd"
+          let date = dateFormatter.date(from: episode["publicationDate"] as! String)
+          
+          self.episodes.append(Episode(
+            id: (episode["id"] as! String),
+            description: EpisodeDescription(html: (episode["description"]?["html"] as! String), markdown: (episode["description"]?["markdown"] as! String)),
+            audioUrl: (episode["audioUrl"] as! String),
+            publicationDate: date,
+            shortDescription: (episode["shortDescription"] as! String),
+            title: (episode["title"] as! String),
+            youtubeUrl: (episode["youtubeUrl"] as! String),
+            spotifyUrl: (episode["spotifyUrl"] as! String)
+            )
+          )
+        }
+        
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+      } catch {
+      }
+    })
+    
+    task.resume()
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,7 +91,7 @@ class EpisodeListViewController: UITableViewController, UISearchResultsUpdating 
   func updateSearchResults(for searchController: UISearchController) {
     if let searchText = searchController.searchBar.text {
       self.filteredEpisodes = episodes.filter { (episode: Episode) -> Bool in
-        return episode.title.lowercased().contains(searchText.lowercased())
+        return (episode.title?.lowercased().contains(searchText.lowercased()) ?? true)
       }
       
       self.tableView.reloadData()

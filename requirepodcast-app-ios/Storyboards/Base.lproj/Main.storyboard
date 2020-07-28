@@ -72,39 +72,41 @@
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsI-Wd-ic6">
-                                <rect key="frame" x="25" y="258" width="364" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F90-zv-Jik">
+                                <rect key="frame" x="25" y="243" width="364" height="570"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="pIB-Ga-gyZ" firstAttribute="trailing" secondItem="LNQ-uZ-fND" secondAttribute="trailing" constant="25" id="BDk-nX-ich"/>
+                            <constraint firstItem="F90-zv-Jik" firstAttribute="top" secondItem="sNK-Bc-w6A" secondAttribute="bottom" constant="10" id="MUR-Ut-XsR"/>
                             <constraint firstItem="MuK-HO-tjC" firstAttribute="leading" secondItem="sNK-Bc-w6A" secondAttribute="trailing" constant="25" id="P83-2y-6kG"/>
                             <constraint firstItem="pIB-Ga-gyZ" firstAttribute="trailing" secondItem="MuK-HO-tjC" secondAttribute="trailing" constant="25" id="RWD-ki-qlc"/>
+                            <constraint firstItem="F90-zv-Jik" firstAttribute="leading" secondItem="pIB-Ga-gyZ" secondAttribute="leading" constant="25" id="Wzj-zc-y9b"/>
                             <constraint firstItem="LNQ-uZ-fND" firstAttribute="leading" secondItem="sNK-Bc-w6A" secondAttribute="trailing" constant="25" id="XSz-BL-Ras"/>
                             <constraint firstItem="sNK-Bc-w6A" firstAttribute="top" secondItem="pIB-Ga-gyZ" secondAttribute="top" constant="25" id="cpa-xO-sJW"/>
                             <constraint firstItem="LNQ-uZ-fND" firstAttribute="top" secondItem="pIB-Ga-gyZ" secondAttribute="top" constant="25" id="flj-dI-LaL"/>
                             <constraint firstItem="sNK-Bc-w6A" firstAttribute="leading" secondItem="pIB-Ga-gyZ" secondAttribute="leading" constant="25" id="fqh-Fe-LwQ"/>
-                            <constraint firstItem="gsI-Wd-ic6" firstAttribute="top" secondItem="sNK-Bc-w6A" secondAttribute="bottom" constant="25" id="gUv-eN-fP3"/>
-                            <constraint firstItem="pIB-Ga-gyZ" firstAttribute="trailing" secondItem="gsI-Wd-ic6" secondAttribute="trailing" constant="25" id="kSD-iJ-dDV"/>
-                            <constraint firstItem="gsI-Wd-ic6" firstAttribute="leading" secondItem="pIB-Ga-gyZ" secondAttribute="leading" constant="25" id="oet-ZH-IOm"/>
+                            <constraint firstItem="pIB-Ga-gyZ" firstAttribute="trailing" secondItem="F90-zv-Jik" secondAttribute="trailing" constant="25" id="slN-uo-xjg"/>
                             <constraint firstItem="MuK-HO-tjC" firstAttribute="top" secondItem="LNQ-uZ-fND" secondAttribute="bottom" constant="10" id="tRE-dX-2fs"/>
+                            <constraint firstItem="pIB-Ga-gyZ" firstAttribute="bottom" secondItem="F90-zv-Jik" secondAttribute="bottom" id="uBB-pc-MdY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pIB-Ga-gyZ"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="4YG-9L-Mug"/>
                     <connections>
-                        <outlet property="episodeDescription" destination="gsI-Wd-ic6" id="ath-tT-agB"/>
+                        <outlet property="episodeDescription" destination="F90-zv-Jik" id="RWl-AD-sf3"/>
                         <outlet property="episodeTitle" destination="LNQ-uZ-fND" id="hsi-Jd-hYe"/>
                         <outlet property="pubDate" destination="MuK-HO-tjC" id="Ws4-gZ-guz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7n-CA-jv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="-176"/>
+            <point key="canvasLocation" x="1195.6521739130435" y="-176.11607142857142"/>
         </scene>
         <!--Player Tab Bar Controller View Controller-->
         <scene sceneID="6hx-g1-RJd">

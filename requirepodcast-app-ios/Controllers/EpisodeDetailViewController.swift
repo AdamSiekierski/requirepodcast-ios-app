@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Down
 
 class EpisodeDetailViewController: UIViewController {
   @IBOutlet weak var episodeTitle: UILabel!
   @IBOutlet weak var pubDate: UILabel!
-  @IBOutlet weak var episodeDescription: UILabel!
+  @IBOutlet weak var episodeDescription: UITextView!
   
   var episode:Episode = Episode()
   
@@ -27,11 +28,39 @@ class EpisodeDetailViewController: UIViewController {
 
     episodeTitle.text = episode.title
     if let publicationDate = episode.publicationDate {
-      pubDate.text = "Data publikacji: \(dateFormatter.string(from: publicationDate))"
+      pubDate.text = dateFormatter.string(from: publicationDate)
     }
     
-    if let description = episode.description?.html {
-      episodeDescription.text = description.htmlToString
+    if let description = episode.description?.markdown {
+      let down = Down(markdownString: description)
+      
+      let mode = traitCollection.userInterfaceStyle
+      
+      let stylesheet = """
+      * {
+        color: \(mode == .dark ? "white" : "black");
+        font-family: monospace;
+        font-size: 16px;
+        margin: 16px 0;
+      }
+      
+      li {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      
+      ul > li:first-of-type {
+        margin-top: 10px;
+      }
+      
+      ul > li:last-of-type {
+        margin-bottom: 10px;
+      }
+      """
+      
+      if let attributedString = try? down.toAttributedString(stylesheet: stylesheet) {
+        self.episodeDescription.attributedText = attributedString
+      }
     }
   }
 }

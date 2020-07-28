@@ -36,7 +36,7 @@ class EpisodeListViewController: UITableViewController, UISearchResultsUpdating 
         
         let episodes = json["episodes"] as! [Dictionary<String, AnyObject>]
 
-        for episode in episodes {
+        for episode in episodes.reversed() {
           let dateFormatter = DateFormatter()
           dateFormatter.dateFormat = "yyyy-MM-dd"
           let date = dateFormatter.date(from: episode["publicationDate"] as! String)

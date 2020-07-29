@@ -13,6 +13,7 @@ class EpisodeDetailViewController: UIViewController {
   @IBOutlet weak var episodeTitle: UILabel!
   @IBOutlet weak var pubDate: UILabel!
   @IBOutlet weak var episodeDescription: UITextView!
+  @IBOutlet weak var playButton: PlayButton!
   
   var episode:Episode = Episode()
   
@@ -62,5 +63,9 @@ class EpisodeDetailViewController: UIViewController {
         self.episodeDescription.attributedText = attributedString
       }
     }
+  }
+
+  @IBAction func onPlayPressed(_ sender: Any) {
+    PlayerManager.shared.play(episode: self.episode)
   }
 }

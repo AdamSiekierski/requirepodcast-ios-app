@@ -26,8 +26,6 @@ class PlayerTabBarControllerViewController: UITabBarController, UITabBarControll
   }
   
   override func viewDidAppear(_ animated: Bool) {
-    
-    
     for viewController in self.viewControllers! {
       var newSafeArea = UIEdgeInsets()
       

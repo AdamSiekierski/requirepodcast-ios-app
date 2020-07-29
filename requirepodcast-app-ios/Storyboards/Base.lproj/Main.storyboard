@@ -189,6 +189,9 @@
                                                 <integer key="value" value="40"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onPlayButtonClicked:" destination="YKv-Jb-lxb" eventType="touchUpInside" id="i0I-Vh-EdH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

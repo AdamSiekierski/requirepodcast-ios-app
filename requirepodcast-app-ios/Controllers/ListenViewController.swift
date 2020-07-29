@@ -74,4 +74,8 @@ class ListenViewController: UIViewController {
     self.episodeTitle.text = self.episode.title
     self.episodeDescription.text = self.episode.shortDescription
   }
+
+  @IBAction func onPlayButtonClicked(_ sender: Any) {
+    PlayerManager.shared.play(episode: self.episode)
+  }
 }

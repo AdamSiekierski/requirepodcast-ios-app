@@ -12,6 +12,7 @@
 		66A90AF4248E448D00C657C7 /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66A90AF3248E448D00C657C7 /* PlayerView.xib */; };
 		66A90AF6248E449E00C657C7 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A90AF5248E449E00C657C7 /* PlayerView.swift */; };
 		66E6B23124D0BBD000794B82 /* Down in Frameworks */ = {isa = PBXBuildFile; productRef = 66E6B23024D0BBD000794B82 /* Down */; };
+		66F1B9A824D1716800041B94 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F1B9A724D1716800041B94 /* PlayerManager.swift */; };
 		66F3D807248AE0FE00D62F91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D806248AE0FE00D62F91 /* AppDelegate.swift */; };
 		66F3D809248AE0FE00D62F91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D808248AE0FE00D62F91 /* SceneDelegate.swift */; };
 		66F3D80B248AE0FE00D62F91 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3D80A248AE0FE00D62F91 /* EpisodeListViewController.swift */; };
@@ -27,6 +28,7 @@
 		66370EA9248BE9D50027394F /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		66A90AF3248E448D00C657C7 /* PlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
 		66A90AF5248E449E00C657C7 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		66F1B9A724D1716800041B94 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		66F3D803248AE0FE00D62F91 /* requirepodcast-app-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "requirepodcast-app-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F3D806248AE0FE00D62F91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F3D808248AE0FE00D62F91 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		66F1B9A624D1714C00041B94 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				66F1B9A724D1716800041B94 /* PlayerManager.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		66F3D7FA248AE0FE00D62F91 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		66F3D805248AE0FE00D62F91 /* requirepodcast-app-ios */ = {
 			isa = PBXGroup;
 			children = (
+				66F1B9A624D1714C00041B94 /* Delegates */,
 				66370EA8248BE9B20027394F /* Components */,
 				66F3D81B248AE3EC00D62F91 /* Controllers */,
 				66F3D81A248AE3AB00D62F91 /* Storyboards */,
@@ -189,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F1B9A824D1716800041B94 /* PlayerManager.swift in Sources */,
 				66FD03DC248CFC4F0022EAB2 /* PlayerTabBarControllerViewController.swift in Sources */,
 				66F3D80B248AE0FE00D62F91 /* EpisodeListViewController.swift in Sources */,
 				66370EAA248BE9D50027394F /* PlayButton.swift in Sources */,
@@ -340,7 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "requirepodcast-app-ios/requirepodcast-app-ios.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AET832XGGG;
 				INFOPLIST_FILE = "requirepodcast-app-ios/Info.plist";
@@ -360,7 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "requirepodcast-app-ios/requirepodcast-app-ios.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AET832XGGG;
 				INFOPLIST_FILE = "requirepodcast-app-ios/Info.plist";
